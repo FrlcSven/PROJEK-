@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(gambar.jpg);
+    background-size: cover; /* Menutupi seluruh area dengan memotong sedikit jika perlu */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    color: rgb(255, 255, 255);
+    position: relative; /* Penting untuk positioning pseudo-element */
+}
+
+body::before {
+    content: ""; /* Penting untuk membuat pseudo-element */
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi 50% */
+    z-index: -1; /* Pastikan overlay berada di belakang konten */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    background-color: #ffffff00;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a.button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #ffffff00;
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: Helvetica;
+}
+
+.cta-button {
+    background-color: white;
+    color: #b71c1c;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #f5f5f5;
+}
+
+
+

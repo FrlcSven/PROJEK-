@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(gambar.jpg);
+    background-size: cover; /* Menutupi seluruh area dengan memotong sedikit jika perlu */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body::before {
+    content: ""; /* Penting untuk membuat pseudo-element */
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi 50% */
+    z-index: -1; /* Pastikan overlay berada di belakang konten */
+}
+
+
+.container, .result-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.success {
+    color: #28a745;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.failure {
+    color: #dc3545;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.result-container p {
+    font-size: 18px;
+}
+
+.result-container .back-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.result-container .back-button:hover {
+    background-color: #007BFF;
+}
+.msgee {
+    color: red;
+}
